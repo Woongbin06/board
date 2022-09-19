@@ -26,8 +26,18 @@ public class Board {
     private String writer;
 
     @Builder // 생성자 대신
-    public Board(Long id, String title, String content, String writer, Long views) {
-        this.id = id;
+    public Board(String title, String content, String writer) {
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
+    public void save(String title, String content, String writer) {
         this.title = title;
         this.content = content;
         this.writer = writer;
